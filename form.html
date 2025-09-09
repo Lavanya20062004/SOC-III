@@ -1,0 +1,110 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+         {
+            box-sizing: 50px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            margin: 20;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: paleturquoise;
+            padding: 30px;
+            border-radius: 80px;
+            box-shadow: 0 0 100px black(100);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 0fr 10fr;
+            gap: 15px;
+        }
+
+        .grid div {
+            display: flex;
+            align-items: left;
+        }
+
+        .grid input[type="text"],
+        .grid input[type="password"] {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .hobbies {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gender {
+            gap: 15px;
+        }
+
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn input {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Registration</h1>
+    <form>
+        <div class="grid">
+            <div><label for="name">Name:</label></div>
+            <div><input type="text" id="name" name="name" required></div>
+
+            <div><label for="password">Password:</label></div>
+            <div><input type="password" id="password" name="password" required></div>
+
+            <div><label>Gender:</label></div>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+
+            <div><label>Hobbies:</label></div>
+            <div class="hobbies">
+                <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+                <label><input type="checkbox" name="hobby" value="Sports"> Sports</label>
+                <label><input type="checkbox" name="hobby" value="Music"> Music</label>
+                <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label>
+            </div>
+        </div>
+
+        <div class="submit-btn">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
